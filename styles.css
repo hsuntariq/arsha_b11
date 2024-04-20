@@ -1,0 +1,60 @@
+:root {
+    --bg-pny: #37517E
+}
+
+nav {
+    background-color: var(--bg-pny);
+}
+
+nav a {
+    color: white !important;
+}
+
+.front {
+    background-color: var(--bg-pny);
+}
+
+.my-img {
+    animation: image 1.5s linear infinite alternate;
+}
+
+@keyframes image {
+    from {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-30px)
+    }
+}
+
+
+
+
+.my-image {
+    filter: grayscale(100%)
+}
+
+.my-image:hover {
+    transition: all 0.9s;
+    filter: grayscale(0);
+    scale: 1.1;
+}
+
+
+
+
+@media only screen and (max-width:988px) {
+    .btns {
+        justify-content: center !important;
+    }
+
+    .my-img {
+        animation-play-state: paused;
+        width: 60% !important;
+    }
+
+    .front-page {
+        flex-direction: column-reverse;
+    }
+}
