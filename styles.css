@@ -1,5 +1,6 @@
 :root {
-    --bg-pny: #37517E
+    --bg-pny: #37517E;
+    --text-blue: #37517E
 }
 
 nav {
@@ -7,7 +8,7 @@ nav {
 }
 
 nav a {
-    color: white !important;
+    color: black !important;
 }
 
 .front {
@@ -16,6 +17,46 @@ nav a {
 
 .my-img {
     animation: image 1.5s linear infinite alternate;
+}
+
+
+.list {
+    z-index: 2222 !important;
+}
+
+.my-ul {
+    z-index: -1111;
+    position: relative;
+}
+
+.child {
+    transform: translateX(90%);
+    opacity: 0;
+    transition: all 0.8s;
+    z-index: -11111111 !important;
+
+}
+
+.list:hover .child {
+    transform: translateX(100%);
+    opacity: 1;
+}
+
+
+.gray-line {
+    width: 15%;
+    height: 2px;
+    background-color: gray;
+}
+
+
+.blue-line {
+    height: 4px;
+    width: 40%;
+    background-color: var(--bs-info);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes image {
@@ -42,6 +83,13 @@ nav a {
 }
 
 
+.my-h1 {
+    color: var(--text-blue);
+}
+
+.progress-bar {
+    background-color: var(--bg-pny) !important;
+}
 
 
 @media only screen and (max-width:988px) {
@@ -54,7 +102,5 @@ nav a {
         width: 60% !important;
     }
 
-    .front-page {
-        flex-direction: column-reverse;
-    }
+
 }
